@@ -97,7 +97,7 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 23,
+    marginTop: 25,
     paddingHorizontal: 24,
   },
   sectionTitle: {
