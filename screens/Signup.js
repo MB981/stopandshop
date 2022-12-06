@@ -30,12 +30,12 @@ export default function Signup(props) {
           }}>
           <Text
             style={{
-              fontSize: 40,
+              fontSize: 30,
               color: darkGreen,
               fontWeight: 'bold',
               marginRight: 70,
             }}>
-            Welcome Back
+            Register Your Account
           </Text>
           <Text
             style={{
@@ -44,30 +44,25 @@ export default function Signup(props) {
               fontWeight: 'bold',
               marginBottom: 20,
             }}>
-            Login to your account
+            Welcome to Stop & Shop
           </Text>
           <Field
             placeholder="Email / Username"
             keyboardType={'email-address'}
           />
+          <Field placeholder="Confirm-Password" secureTextEntry={true} />
           <Field placeholder="Password" secureTextEntry={true} />
-          <View
-            style={{
-              alignItems: 'flex-end',
-              width: '60%',
-              paddingRight: 16,
-              marginBottom: 40,
-            }}>
-            <Text style={{color: darkGreen, fontWeight: 'bold', fontSize: 16}}>
-              Forget Password?
-            </Text>
-          </View>
+
           <Btn
             textColor="white"
             bgColor={darkGreen}
-            btnLabel="Login"
+            btnLabel="Signup"
             btnRight={70}
-            Press={() => alert('Login')}></Btn>
+            Press={() => {
+              alert('Account Created');
+              props.navigation.navigate('Login');
+            }}
+          />
           <View
             style={{
               display: 'flex',
@@ -82,16 +77,20 @@ export default function Signup(props) {
                 fontWeight: 'bold',
                 fontSize: 16,
               }}>
-              Don't have an account ?
+              Already have an account ?
             </Text>
-            <TouchableOpacity Press={() => props.navigation.navigate('Signup')}>
+            <TouchableOpacity
+              onPress={() => {
+                props.navigation.navigate('Login');
+              }}>
               <Text
                 style={{
                   color: darkGreen,
                   fontWeight: 'bold',
                   fontSize: 16,
+                  marginLeft: 2,
                 }}>
-                SignUp
+                Login
               </Text>
             </TouchableOpacity>
           </View>
