@@ -6,7 +6,7 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, {useEffect} from 'react';
 import type {Node} from 'react';
 import {
   SafeAreaView,
@@ -25,11 +25,12 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+import SplashScreen from 'react-native-splash-screen';
 
 /* $FlowFixMe[missing-local-annot] The type annotation(s) required by Flow's
  * LTI update could not be added via codemod */
 const Section = ({children, title}): Node => {
-  const isDarkMode = useColorScheme() === 'daarrk';
+  const isDarkMode = useColorScheme() === 'dark';
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -56,7 +57,9 @@ const Section = ({children, title}): Node => {
 
 const App: () => Node = () => {
   const isDarkMode = useColorScheme() === 'dark';
-
+  useEffect(() => {
+    SplashScreen.hide();
+  }, []);
   const backgroundStyle = {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
@@ -97,7 +100,7 @@ const App: () => Node = () => {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 25,
+    marginTop: 32,
     paddingHorizontal: 24,
   },
   sectionTitle: {
