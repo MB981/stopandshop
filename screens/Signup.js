@@ -88,7 +88,7 @@ export default function Signup(props) {
                   color: darkGreen,
                   fontWeight: 'bold',
                   fontSize: 16,
-                  marginLeft: 2,
+                  marginLeft: 3,
                 }}>
                 Login
               </Text>
