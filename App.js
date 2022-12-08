@@ -15,10 +15,10 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Login from './screens/Login';
 import Signup from './screens/Signup';
 import LetStart from './screens/LetStart';
-import Home from './nav_screens/Home';
 import Profile from './nav_screens/Profile';
 import Cart from './nav_screens/Cart';
 import Tabs from './navigation/Tabs';
+import Home from './nav_screens/Home';
 const Stack = createNativeStackNavigator();
 const App = () => {
   useEffect(() => {
