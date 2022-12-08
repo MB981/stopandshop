@@ -14,7 +14,7 @@ const shopping = [
   },
 ];
 
-const Cart = ({navigation}) => {
+const Cart = () => {
   return (
     <View style={{backgroundColor: '#f5f5f5'}}>
       <FlatList
@@ -24,7 +24,7 @@ const Cart = ({navigation}) => {
             <Image style={stylesx.imageStyle} source={{uri: item.ImageURl}} />
             <Text
               style={stylesx.GridViewInsideTextItemStyle}
-              onPress={this.didClickOnRowItems.bind(this, item)}>
+              onPress={this.didClickOnCartItems.bind(this, item)}>
               {item.Name}{' '}
             </Text>
           </View>
@@ -33,12 +33,19 @@ const Cart = ({navigation}) => {
     </View>
   );
 };
-//Handdle rowItemClick Event
-didClickOnRowItems = item => {
+//Card Clicked Handler
+didClickOnCartItems = item => {
   Alert.alert(
     'Stop & Shop',
     'Thank You 😉 ',
-    [{text: 'Done 👍', onPress: () => console.log('')}],
+    [
+      {
+        text: '',
+        onPress: () => console.log('Cancel Pressed'),
+        style: 'cancel',
+      },
+      {text: 'Done 👍 ', onPress: () => console.log('OK Pressed')},
+    ],
     item.Name,
   );
 };

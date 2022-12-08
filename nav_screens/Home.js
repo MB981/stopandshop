@@ -130,7 +130,7 @@ const shopping = [
   },
 ];
 
-const Home = ({navigation}) => {
+const Home = () => {
   return (
     <View style={{backgroundColor: '#f5f5f5'}}>
       <FlatList
