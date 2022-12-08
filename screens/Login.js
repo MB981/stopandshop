@@ -66,7 +66,10 @@ export default function Login(props) {
             bgColor={darkGreen}
             btnLabel="Login"
             btnRight={70}
-            Press={() => alert('Login')}></Btn>
+            Press={() => {
+              alert('Login');
+              props.navigation.navigate('Tabs');
+            }}></Btn>
           <View
             style={{
               display: 'flex',

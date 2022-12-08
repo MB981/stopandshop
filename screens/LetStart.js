@@ -2,7 +2,7 @@ import {StyleSheet, View, Text, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Background from './Background';
 import {darkGreen, green} from './Constraints';
-export default function Home(props) {
+export default function LetStart(props) {
   return (
     <Background>
       <View style={styles.view}>
