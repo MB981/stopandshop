@@ -9,7 +9,7 @@ import Signup from './screens/Signup';
 import LetStart from './screens/LetStart';
 import Profile from './nav_screens/Profile';
 import Cart from './nav_screens/Cart';
-import Tabs from './navigation/Tabs';
+import Tabs from './bottom_navigation_tabs/Tabs';
 import Home from './nav_screens/Home';
 const Stack = createNativeStackNavigator();
 const App = () => {
