@@ -31,8 +31,9 @@ const Profile = props => {
           fontSize: 16,
           color: 'orange',
           fontWeight: '500',
-          marginTop: 90,
-        }}>
+          marginTop: 70,
+        }}
+        onPress={() => props.navigation.navigate('Home')}>
         🏠 Home
       </Text>
       <Text
