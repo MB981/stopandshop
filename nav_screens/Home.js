@@ -150,10 +150,21 @@ const Home = ({navigation}) => {
     </View>
   );
 };
-
 //Handdle rowItemClick Event
 didClickOnRowItems = item => {
-  Alert.alert('Add to cart ', item.Name);
+  Alert.alert(
+    'Stop & Shop',
+    'Welcome 🥳 ',
+    [
+      {
+        text: 'Cancel',
+        onPress: () => console.log('Cancel Pressed'),
+        style: 'cancel',
+      },
+      {text: 'Add to Cart', onPress: () => console.log('OK Pressed')},
+    ],
+    item.Name,
+  );
 };
 
 const stylesx = StyleSheet.create({
